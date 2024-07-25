@@ -1,1 +1,2 @@
-localStorage.getItem('shoppingCart');
+// localStorage.getItem('shoppingCart');
+// localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));

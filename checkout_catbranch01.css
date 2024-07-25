@@ -1,3 +1,9 @@
+/* Add styles to the form container */
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .row {
     display: -ms-flexbox;
     display: flex;
@@ -7,11 +13,14 @@
 }
 
 .col-25 {
+    display: block;
     -ms-flex: 25%;
     flex: 25%;
+    margin: 0 40px;
 }
 
 .col-50 {
+    display: -ms-flexbox;
     -ms-flex: 50%;
     flex: 50%;
 }
@@ -27,7 +36,7 @@
     padding: 0 15px;
 }
 
-.container {
+.flex-container {
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
@@ -35,7 +44,7 @@
 }
 
 input[type=text] {
-    width: 100%;
+    width: 96%;
     margin-bottom: 20px;
     padding: 12px;
     border: 1px solid #ccc;
