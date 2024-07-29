@@ -72,6 +72,14 @@ label {
     font-size: 24px;
 }
 
+img {
+    src: url(assets/images/payment-methods.png);
+    width: 50%;
+    height: 50%;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+
 .btn {
     background-color: #4CAF50;
     color: white;
