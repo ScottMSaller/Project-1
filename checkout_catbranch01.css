@@ -25,6 +25,16 @@
     flex: 50%;
 }
 
+/* add shipping address if not same as billing address 
+.checkbox:checked + .form-container {
+    display: none;
+}
+
+.checkbox:unchecked + .form-container {
+    display: block;
+} */
+
+
 .col-75 {
     -ms-flex: 75%;
     flex: 75%;
