@@ -3,12 +3,20 @@
 function showShippingAddress() {
     var checkBox = document.getElementById("shippingAddress");
     var shippingAddress = document.getElementById("shippingAddressDiv");
+    var shippingAddressInput = document.getElementById("shippingAddressInput");
     if (checkBox.checked == true) {
         shippingAddress.style.display = "block";
+        shippingAddressInput.style.display = "none";
     } else {
-        prompt("Please enter your shipping address");
+        shippingAddress.style.display = "none";
+        shippingAddressInput.style.display = "block";
     }
-};
+}
+
+// TODO: add event listener to  the shipping address checkbox
+
+document.getElementById("shippingAddress").addEventListener("change", showShippingAddress);
+
 
 // TODO: create a function to pull items from shopping cart and display them in the checkout page
 
