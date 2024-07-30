@@ -1,5 +1,30 @@
 /* Add styles to the form container */
+* {
+    box-sizing: border-box;
+}
 
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding: 8px;
+}  
+
+a {
+    color: #2196F3;
+}
+
+hr {
+    border: 1px solid lightgrey;
+}
+span.price {
+    float: right;
+    color: grey;
+}
 
 .row {
     display: -ms-flexbox;
@@ -45,22 +70,7 @@
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    padding: 8px;
-}   
+} 
 
 input[type=text] {
     width: 96%;
@@ -105,20 +115,7 @@ img {
     background-color: #45a049;
 }
 
-
-a {
-    color: #2196F3;
-}
-
-hr {
-    border: 1px solid lightgrey;
-}
-span.price {
-    float: right;
-    color: grey;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media (max-width: 800px) {
     .row {
         flex-direction: column-reverse;
