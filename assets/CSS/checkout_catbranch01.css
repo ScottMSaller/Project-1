@@ -1,8 +1,5 @@
 /* Add styles to the form container */
 
-:root {
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 .row {
     display: -ms-flexbox;
@@ -13,14 +10,11 @@
 }
 
 .col-25 {
-    display: block;
     -ms-flex: 25%;
     flex: 25%;
-    margin: 0 40px;
 }
 
 .col-50 {
-    display: -ms-flexbox;
     -ms-flex: 50%;
     flex: 50%;
 }
@@ -43,15 +37,30 @@
 .col-25,
 .col-50,
 .col-75 {
-    padding: 0 15px;
+    padding: 0 16px;
 }
 
-.flex-container {
+.container {
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding: 8px;
+}   
 
 input[type=text] {
     width: 96%;
@@ -100,6 +109,14 @@ img {
     margin-bottom: 20px;
     padding: 7px 0;
     font-size: 24px;
+}
+
+a {
+    color: #2196F3;
+}
+
+hr {
+    border: 1px solid lightgrey;
 }
 span.price {
     float: right;

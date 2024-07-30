@@ -21,6 +21,7 @@ document.getElementById("shippingAddress").addEventListener("change", showShippi
 // TODO: create a function to pull items from shopping cart and display them in the checkout page
 
 // Assuming the shoppingCart object is defined elsewhere in the code!!!!!
+
 function displayCart() {
     if (typeof shoppingCart === 'undefined') {
         console.error("shoppingCart is not defined!");
