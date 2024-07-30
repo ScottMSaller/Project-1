@@ -15,7 +15,7 @@
 
 <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <img src="./assets/icon.svg" width="50" height="50">
+        <img id="logo" src="./assets/icon.svg" width="80" height="80">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,19 +23,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="checkout.html">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Bikes</a>
-                        <a class="dropdown-item" href="#">Parts</a>
-                        <a class="dropdown-item" href="#">Accessories</a>
+                        <a class="dropdown-item" href="#">Products</a>
+                        <a class="dropdown-item" href="#">Checkout</a>
+
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
@@ -53,23 +50,54 @@
 
         <section class="flex-container">
             <div>
-                <div class="p-2 flex-fill"><img 
-                        src="product.assets/27-5-inch-Mountain-Bike-for-Men-Aluminum-Mountain-Bike-with-21-Speed-Black_2661f94d-33f5-4e69-a90c-6efa875f91ca.72c8b80159e57bb5ffb110cacf0d6c6b.webp"
-                        alt="bike"> </div>
+                <div class="p-2 flex-fill">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" id="product1">
+                                <img src="product.assets/EasyBikes/2.png"  alt="bike">
+                            </div>
+                            <div class="carousel-item" id="product2">
+                                <img src="product.assets/EasyBikes/bikes (640 x 640 px).png" alt="bike">
+                            </div>
+                           
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev" id="slide" ></button">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Back</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next" id="slide">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
             </div>
             <div class="d-flex">
                 <div class="p-2 flex-fill">
-                    <p id="product-name">EASY BIKE2.0</p>
-                    <p id="product-price">Price: $50</p>
-                    <p id="product-description">The EasyBike2 is a great bike for beginners and experienced riders
-                        alike. It is lightweight and easy to handle, making it perfect for commuting or leisurely rides
-                        around town. The EasyBike2 features a durable steel frame and fork, 26-inch wheels, and a
-                        7-speed Shimano drivetrain. It also has front and rear linear pull brakes for reliable stopping
+                    <p id="product-name"><b>EASY BIKE2.0</b></p>
+                    <p id="product-price">Price: $200</p>
+                    <p id="product-description">The EASY BIKE2.0 is a great bike for beginners and experienced riders
+                        alike. It is lightweight and easy to handle, making it perfect for commuting or enjoying rides
+                        around town. The EASY BIKE2.0 features a durable steel frame and fork, and 26-inch wheels. It also
+                        has front and rear linear pull brakes for reliable stopping
                         power. Whether you are looking for a reliable commuter bike or a fun way to get around town, the
-                        EasyBike2 is a great choice.</p>
+                        EASY BIKE2.0 is a great choice.</p>
+                        <div class="col-xxs-1">
+                            <div class="seProductQuantitySelection" data-ui="product-buygrid-quantity">
+                            <div class="form-group seQuantityContainer">
+                            <label class="seControlLabel" for="QuantityInput">Quantity</label>
+                            <input type="number" name="quantity" id="QuantityInput" class="form-control seFormInputText seQuantityInput"  value="1"  min="1" max="50">
+                            
+                            </div>
+                            </div>
+                            </div>
                     <button type="button" class="btn btn-outline-danger" id="btn">Add to cart</button>
+                    
                     <img id="cart" src="product.assets/shopping-cart.png" alt="shopping-cart">
-
+                        
                 </div>
 
 
@@ -79,40 +107,7 @@
 
     </main>
 
-    <footer>
-        <button id="back">Back</button>
-        <button id="next">Next</button>
-    </footer>
-
-
-
-
-
-
-
-    <!-- <section class="slideshow-container">
-      
-        <section class="img">
-            <h1>Products</h1>
-            <hr>    
-            <img src="product.assets/1.png" alt="bike">
-        </section>
-        <section>
-            <p>Product Name:</p>
-            <p>Price:</p>
-            <p>Description:</p>
-            <button id = "btn">Add to cart</button>
-        </section> -->
-
-
-
-    <!-- <section class="img">
-            <img src="product.assets/2.png" alt="bike2">
-            <h2>Product Name</h2>
-            <p>Price</p>
-            <p>Description</p>
-            <button>Add to cart</button> -->
-
+   
 
 
 

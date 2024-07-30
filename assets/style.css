@@ -21,9 +21,16 @@
     width: 90%;
     height: 90%;
     margin: 0 auto;
-    display: block;
+    display: flex;
 }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: var(--black);
+}
+.col-xxs-1 {
+    width: 28%;
 
+   
+}
 
 
 #product-name, #product-price {
@@ -32,7 +39,7 @@
     font-family: 'Roboto', sans-serif;
     justify-content: right;
     margin-top: 50px;
-    background-image: url(../images/hero.jpg);
+
 
 }
 /* shrink deescription */
@@ -79,18 +86,10 @@
 
 
 
-/* need footer at the bottom of the page  */
-#back{
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
-   
-    
-   
-}
 
 
-footer  {
+
+/* footer  {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -101,22 +100,5 @@ footer  {
     margin-top: 70px;
     
 
-}
+} */
 
-/*need footer at the bootom right of the page */
-
-#next {
-    
-    text-align: right;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
-    
-   
-
-
-
-}
-    
-
-
-/* need the back button to be at the far left side of the page  */
