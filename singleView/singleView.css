@@ -82,7 +82,19 @@
     animation-direction: alternate; 
 }
 
-
+@media screen and (max-width: 1200px){
+    #product-name, #product-price {
+        font-size: 2rem
+    }
+    #product-description {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 1rem 5rem;
+        
+    }
+}
 
 
 

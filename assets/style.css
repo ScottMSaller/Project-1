@@ -4,14 +4,15 @@
     --red: #E3170A;
     --saffron: #EEC643;
 }
-
+*{
+    font-family: "Helvetica Neue", "Arial", "sans-serif" !important;
+}
 .header-bg {
     background-image: url('https://images.giant-bicycles.com/oz9alq0zvm1fwnz6hrmx/preview.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 800px; 
-  
 }
 
 .navbar {

@@ -5,7 +5,7 @@ const message = document.querySelector("#cart-message");
 let cart = JSON.parse(localStorage.getItem("cart"));
 function isCartEmpty(){
     if(localStorage.getItem("cart") == null || localStorage.getItem("cart") == undefined || localStorage.getItem("cart") == "{}") {
-        message.innerHTML = "Oops! looks like you haven't added anything to your cart yet. If you would like to browse what we have in stock,<a href=\"../products/products.html\">please click here</a>"
+        message.innerHTML = "Oops! Looks like you haven't added anything to your cart yet. If you would like to browse what we have in stock, <a href=\"../products/products.html\">please click here</a>"
         localStorage.setItem("choice", "See All");
         checkout.innerHTML = "";
     }
@@ -13,7 +13,7 @@ function isCartEmpty(){
         checkout.innerHTML = "";
         checkout.classList = "text-center"
         checkout.innerHTML = `
-        <p class="lead">when you are ready to go to checkout, please click the button below</p>
+        <p class="lead">When you are ready to go to checkout, please click the button below.</p>
         <a href="../checkout/checkout.html" class="btn btn-primary" >Checkout</a>`
     }
 }
