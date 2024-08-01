@@ -9,7 +9,7 @@ dropdownMenu.addEventListener("click", function(event) {
     localStorage.setItem("choice", event.target.innerHTML);
 });
 console.log(location.pathname)
-if(location.pathname === "/Project-1/"){
+if(location.pathname === "/Project-1/index.html"){
     seeAll.addEventListener("click", function(event) {
         localStorage.setItem("choice", "See All");
         location.href ="/Project-1/products/products.html"
