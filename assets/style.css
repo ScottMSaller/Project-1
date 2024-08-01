@@ -1,6 +1,69 @@
-:root {
-    --white: #F0EFF4;
-    --black: #272727;
-    --red: #E3170A;
-    --saffron: #EEC643;
+
+
+.header-bg {
+    background-image: url('https://images.giant-bicycles.com/oz9alq0zvm1fwnz6hrmx/preview.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px; 
+  
 }
+
+.navbar {
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(203, 30, 30, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; 
+   
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; 
+   
+}
+
+.nav-item {
+    margin: 0 10px; 
+  
+}
+
+.card {
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .btn {
+    margin-top: auto;
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+
+
