@@ -1,5 +1,5 @@
 # Project-1- EZY BIKE
-## we took one one heck of a challenge and we did it.
+## we took on one heck of a challenge and we did it.
 
 ## Content:
 The content of the following reposiory is the summation of efforts from our group, comprising of Catherine, Marquel, OG, and myself.
