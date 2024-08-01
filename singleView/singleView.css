@@ -1,0 +1,117 @@
+:root {
+    --white: #F0EFF4;
+    --black: #272727;
+    --red: #E3170A;
+    --saffron: #EEC643;
+}
+
+#image {
+    max-width: 80vw;
+}
+
+
+
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#bikeImg {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: var(--black);
+}
+.col-xxs-1 {
+    width: 28%;
+
+   
+}
+
+
+#product-name, #product-price {
+    font-size: 3.5rem;
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    justify-content: right;
+    margin-top: 50px;
+
+
+}
+/* shrink deescription */
+#product-description {
+    font-size: 2rem;
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    /* background-image: url(../images/hero.jpg); */
+}
+
+.btn {
+    font-size: 2rem;
+    padding: 1rem 5rem;
+    
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+}
+
+#btn:hover {
+    background-color: var(--red);
+}
+
+
+/* decrease the size of img cart */
+#cart{
+    width: 100px;
+    height: 100px;
+   animation-direction: alternate; 
+   
+}
+
+#cart:hover {
+    background-color: var(--saffron);
+    animation-direction: alternate; 
+}
+
+@media screen and (max-width: 1200px){
+    #product-name, #product-price {
+        font-size: 2rem
+    }
+    #product-description {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 1rem 5rem;
+        
+    }
+}
+
+
+
+
+
+
+
+
+/* footer  {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--black);
+    padding: 1px;
+    font-size: 1.5rem;
+    margin-top: 70px;
+    
+
+} */

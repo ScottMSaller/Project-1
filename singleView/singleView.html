@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="./singleView.css">
+    <title id="title"></title>
+</head>
+
+<header>
+    <nav  class="navbar" style="background-color: #e3f2fd;">  
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img src="../assets/icon.svg" class="logo" alt="EzyBike"></a>
+          <a href="../cart/cart.html"><img src="../assets/cart.svg" style="min-height: 30px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../products/products.html">Bikes</a>
+                      <a class="dropdown-item" href="../products/products.html">Parts</a>
+                      <a class="dropdown-item" href="../products/products.html">Accessories</a>
+                      <a class="dropdown-item" href="../products/products.html">See All</a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html#about-us">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html#contact">Contact</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+</header>
+
+<body>
+    <main id="product-details">
+
+        <!-- <section class="flex-container">
+            <div>
+                <div class="p-2 flex-fill" id="image-div">
+                    <img id="image">
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="p-2 flex-fill">
+                    <p id="product-name"><b></b></p>
+                    <p id="product-price"></p>
+                    <p id="product-description"></p>
+                        <div class="col-xxs-1">
+                            <div class="seProductQuantitySelection" data-ui="product-buygrid-quantity">
+                            <div class="form-group seQuantityContainer">
+                            <label class="seControlLabel" for="QuantityInput">Quantity</label>
+                            <input type="number" name="quantity" id="product-quantity" class="form-control seFormInputText seQuantityInput"  value="1"  min="1" max="50">
+                            
+                            </div>
+                            </div>
+                            </div>
+                    <button type="button" class="btn btn-outline-danger" id="btn">Add to cart</button>
+                    <img id="cart" src="../assets/cart.svg" alt="shopping-cart">    
+                </div>
+            </div>
+        </section> -->
+
+
+    </main>
+    <footer class="bg-light py-3">
+      <div class="container text-center">
+          <p>&copy; 2024 EZY BIKE. All rights reserved.</p>
+      </div>
+  </footer>
+</body>
+<script src="./singleView.js" type="module"></script>
+<script src="../modules/productList.js" type="module"></script>
+<script src="../assets/script.js"></script>
+</html>
