@@ -70,7 +70,7 @@ function renderCart() {
         currentProductDiv.innerHTML = 
         `<hr>
         <h2>${currentProduct["title"]}</h2>
-        <img src="${currentProduct["img"]}">
+        <img style="max-width: 80vw"src="${currentProduct["img"]}">
         <h4>${currentProduct["description"]}</h4>
         <h5>${currentProduct["price"]}</h5>
         <p>Quantity: ${value}</p>
@@ -84,6 +84,7 @@ function renderCart() {
         currentProductDiv.appendChild(button);
         currentProductDiv.appendChild(br)
         container.appendChild(currentProductDiv);
+        
     }
 }
 isCartEmpty();

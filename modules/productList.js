@@ -18,7 +18,7 @@ export const products = [
   {
       "id": 2, 
       "img" : "https://m.media-amazon.com/images/I/51UtCWdwcOL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
-      "title" : "Duke Bike Bell",
+      "title" : "Duck Bike Bell",
       "description" : "Duck bike bell can be used as a bicycle, motorcycle bell, or can be placed on scooters and strollers.",
       "type" : "accessory",
       "price" : "$10"

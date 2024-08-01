@@ -18,8 +18,12 @@ function createCart() {
         let price = quantity * (products[key]["price"].slice(1));
         total += price;
         const p = document.createElement("p");
-        p.innerHTML = `<a href="./cart.html">${productName}</a><span id="quantity"><br> x${quantity}</span><span class="price">$${price}</span>`
+        p.innerHTML = `<a href="../singleView/singleView.html">${productName}</a><span id="quantity"><br> x${quantity}</span><span class="price">$${price}</span>`
         productContainer.appendChild(p);
+        p.addEventListener("click", function() {
+            localStorage.setItem("current", product["id"]);
+            location.href ="../singleView/singleView.html"
+        })
     }
     totalEl.textContent = `$${total}`;
     quantityEl.textContent = totalQuantity;
@@ -38,14 +42,14 @@ function showShippingAddress() {
     }
 }
 
-// TODO: add event listener to  the shipping address checkbox
+// // TODO: add event listener to  the shipping address checkbox
 
-document.getElementById("shippingAddress").addEventListener("change", showShippingAddress);
+// document.getElementById("shippingAddress").addEventListener("change", showShippingAddress);
 
 
-// TODO: create a function to pull items from shopping cart and display them in the checkout page
+// // TODO: create a function to pull items from shopping cart and display them in the checkout page
 
-// Assuming the shoppingCart object is defined elsewhere in the code!!!!!
+// // Assuming the shoppingCart object is defined elsewhere in the code!!!!!
 
 function displayCart() {
     if (typeof shoppingCart === 'undefined') {
