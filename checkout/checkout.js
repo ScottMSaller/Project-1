@@ -2,7 +2,7 @@
 //import to access our array of products
 import { products } from "../modules/productList.js";
 const cart = JSON.parse(localStorage.getItem("cart"));
-
+console.log(cart);
 //save our product container into a constant
 const productContainer = document.querySelector("#product-container");
 const totalEl = document.querySelector("#totalPrice"); 
@@ -21,10 +21,11 @@ function createCart() {
         p.innerHTML = `<a href="../singleView/singleView.html">${productName}</a><span id="quantity"><br> x${quantity}</span><span class="price">$${price}</span>`
         productContainer.appendChild(p);
         p.addEventListener("click", function() {
-            localStorage.setItem("current", product["id"]);
+            localStorage.setItem("current", products[key]["id"]);
             location.href ="../singleView/singleView.html"
         })
     }
+    console.log(total)
     totalEl.textContent = `$${total}`;
     quantityEl.textContent = totalQuantity;
 }
@@ -51,85 +52,85 @@ function showShippingAddress() {
 
 // // Assuming the shoppingCart object is defined elsewhere in the code!!!!!
 
-function displayCart() {
-    if (typeof shoppingCart === 'undefined') {
-        console.error("shoppingCart is not defined!");
-        return;
-    }
-    var cartArray = shoppingCart.listCart();
-    var output = "";
-    for (var i in cartArray) {
-        output += "<tr>"
-            + "<td>" + cartArray[i].name + "</td>"
-            + "<td>(" + cartArray[i].count + ")</td>"
-            + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-            + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-            + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-            + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-            + " = "
-            + "<td>" + cartArray[i].total + "</td>"
-            + "</tr>";
-    }
-    $('.show-cart').html(output);
-    $('.total-cart').html(shoppingCart.totalCart());
-    $('.total-count').html(shoppingCart.totalCount());
-}
+// function displayCart() {
+//     if (typeof shoppingCart === 'undefined') {
+//         console.error("shoppingCart is not defined!");
+//         return;
+//     }
+//     var cartArray = shoppingCart.listCart();
+//     var output = "";
+//     for (var i in cartArray) {
+//         output += "<tr>"
+//             + "<td>" + cartArray[i].name + "</td>"
+//             + "<td>(" + cartArray[i].count + ")</td>"
+//             + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+//             + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+//             + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+//             + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+//             + " = "
+//             + "<td>" + cartArray[i].total + "</td>"
+//             + "</tr>";
+//     }
+//     $('.show-cart').html(output);
+//     $('.total-cart').html(shoppingCart.totalCart());
+//     $('.total-count').html(shoppingCart.totalCount());
+// }
 
 // TODO: create a function to calculate the total price of the items in the shopping cart
 
-function displayTotal() {
-    var cartArray = shoppingCart.listCart();
-    var total = 0;
-    for (var i in cartArray) {
-        total += cartArray[i].total;
-    }
-    $('.total-cart').html(total);
-}
+// function displayTotal() {
+//     var cartArray = shoppingCart.listCart();
+//     var total = 0;
+//     for (var i in cartArray) {
+//         total += cartArray[i].total;
+//     }
+//     $('.total-cart').html(total);
+// }
 
 // TODO: Add a function to remove items from the shopping cart
 
-$('.show-cart').on("click", ".delete-item", function (event) {
-    var name = $(this).data('name');
-    shoppingCart.removeItemFromCartAll(name);
-    displayCart();
-    displayTotal();
-});
+// $('.show-cart').on("click", ".delete-item", function (event) {
+//     var name = $(this).data('name');
+//     shoppingCart.removeItemFromCartAll(name);
+//     displayCart();
+//     displayTotal();
+// });
 
 // TODO: Add a function to increment the quantity of an item in the shopping cart
 
-$('.show-cart').on("click", ".plus-item", function (event) {
-    var name = $(this).data('name');
-    shoppingCart.addItemToCart(name, 0, 1);
-    displayCart();
-    displayTotal();
-});
+// $('.show-cart').on("click", ".plus-item", function (event) {
+//     var name = $(this).data('name');
+//     shoppingCart.addItemToCart(name, 0, 1);
+//     displayCart();
+//     displayTotal();
+// });
 
 // TODO: Add a function to decrement the quantity of an item in the shopping cart
 
-$('.show-cart').on("click", ".minus-item", function () {
-    var name = $(this).data('name');
-    shoppingCart.removeItemFromCart(name);
-    displayCart();
-    displayTotal();
-});
+// $('.show-cart').on("click", ".minus-item", function () {
+//     var name = $(this).data('name');
+//     shoppingCart.removeItemFromCart(name);
+//     displayCart();
+//     displayTotal();
+// // });
+// 
+// // TODO: Add a function to clear the shopping cart
 
-// TODO: Add a function to clear the shopping cart
+// $('.clear-cart').click(function () {
+//     shoppingCart.clearCart();
+//     displayCart();
+//     displayTotal();
+// });
 
-$('.clear-cart').click(function () {
-    shoppingCart.clearCart();
-    displayCart();
-    displayTotal();
-});
+// // TODO: Add a function to display the items in the shopping cart
 
-// TODO: Add a function to display the items in the shopping cart
+// $('.show-cart').on("change", ".item-count", function () {
+//     var name = $(this).data('name');
+//     var count = Number($(this).val());
+//     shoppingCart.setCountForItem(name, count);
+//     displayCart();
+//     displayTotal();
+// // });
 
-$('.show-cart').on("change", ".item-count", function () {
-    var name = $(this).data('name');
-    var count = Number($(this).val());
-    shoppingCart.setCountForItem(name, count);
-    displayCart();
-    displayTotal();
-});
-
-displayCart();
-displayTotal();
+// displayCart();
+// displayTotal();

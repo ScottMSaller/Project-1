@@ -4,6 +4,7 @@ const productContainer = document.querySelector("#product-container");
 const header = document.querySelector("#product-header");
 const p = document.querySelector("#product-p");
 const title = document.querySelector("#title");
+const body = document.querySelector("#body");
 function createChoice(){
     let choice = localStorage.getItem("choice");
     if(choice === "See All"){
@@ -73,11 +74,32 @@ function renderProducts(arg) {
         price.textContent = product["price"];
 
         let button = document.createElement("a");
-        button.setAttribute("class", "btn btn-primary");
-        button.textContent = "Add to Cart";
-        button.id = product["id"];
+        button.innerHTML = `<button type="button" id=${product["id"]} class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addToModal${product["id"]}">
+                                Add to cart
+                            </button>`
+
+        let modalDiv = document.createElement("div");
+        
+        modalDiv.innerHTML = `<div class="modal fade" id="addToModal${product["id"]}" tabindex="-1" role="dialog" aria-labelledby="addToModalLabel${product["id"]}" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="addToModalLabel${product["id"]}">Add to cart</h5>
+                                    
+                                  </div>
+                                  <div class="modal-body">
+                                    Successfully added ${product["title"]} to cart!
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>`;
+        
         button.addEventListener("click", addToCart);
     
+        
         photoDiv.appendChild(cardDiv);
         cardDiv.appendChild(image);
         cardDiv.appendChild(innerDiv);
@@ -85,6 +107,7 @@ function renderProducts(arg) {
         innerDiv.appendChild(cardText);
         innerDiv.appendChild(price);
         innerDiv.appendChild(button);
+        body.appendChild(modalDiv)
         productContainer.appendChild(photoDiv);
         }
     }
@@ -106,9 +129,9 @@ function addToCart(e) {
         }
         localStorage.setItem("cart", JSON.stringify(cart));
     }
-    alert(`Successfully added ${products[id]["title"]} to your cart!`)
+    // alert(`Successfully added ${products[id]["title"]} to your cart!`)
 }
-if(location.pathname == "/Project-1/products/products.html"){
+if(location.pathname == "/products/products.html"){
     createChoice();
 }
 //figure out a way to determine the name of the current tab and then run this function accordingly

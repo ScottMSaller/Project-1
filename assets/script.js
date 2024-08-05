@@ -9,21 +9,21 @@ dropdownMenu.addEventListener("click", function(event) {
     localStorage.setItem("choice", event.target.innerHTML);
 });
 console.log(location.pathname)
-if(location.pathname === "/index.html"){
+if(location.pathname === "/Project-1/index.html"){
     seeAll.addEventListener("click", function(event) {
         localStorage.setItem("choice", "See All");
-        location.href ="./products/products.html"
+        location.href ="/Project-1/products/products.html"
     });
     parts.addEventListener("click", function(event) {
         localStorage.setItem("choice", "Parts");
-        location.href ="./products/products.html"
+        location.href ="/Project-1/products/products.html"
     });
     bikes.addEventListener("click", function(event) {
         localStorage.setItem("choice", "Bikes");
-        location.href ="./products/products.html"
+        location.href ="/Project-1/products/products.html"
     });
     accessories.addEventListener("click", function(event) {
         localStorage.setItem("choice", "Accessories");
-        location.href ="./products/products.html"
+        location.href ="/Project-1/products/products.html"
     });
 }
