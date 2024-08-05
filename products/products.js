@@ -131,7 +131,5 @@ function addToCart(e) {
     }
     // alert(`Successfully added ${products[id]["title"]} to your cart!`)
 }
-if(location.pathname === "/Project-1/products/products.html"){
     createChoice();
-}
 //figure out a way to determine the name of the current tab and then run this function accordingly
